@@ -9,6 +9,24 @@ $(".first-slide-slider").owlCarousel({
     lazyLoad:true
 });
 
+$(".slider-wrapper").owlCarousel({
+    nav: true,
+    navContainer: "#sliderNavWrapper",
+    dots: false,
+    loop:true,
+    addClassActive: true,
+    lazyLoad:true,
+    center:true,
+    responsive: {
+        0: {
+            items: 1,
+        },
+        1100: {
+            items: 2,
+        }
+    }
+});
+
 $(".burger").click(function(e) {
     e.preventDefault();
     $(this).toggleClass('activeBurger');
