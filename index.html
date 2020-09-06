@@ -10,6 +10,24 @@
 </head>
 <body>
 
+    <div class="popup-fon"></div>
+    <div class="popup">
+        <div class="popup-close">
+            <span></span>
+            <span></span>
+        </div>
+        <h2>Получить консультацию</h2>
+        <p>Заполните формы и мы перезвоним</p>
+        <form id="popupForm">
+            <input type="text" placeholder="Имя" required>
+            <input type="text" id="numbersPopup" placeholder="Номер телефона" required>
+            <button class="btn">
+                Задать вопрос
+                <img src="./img/arrow.svg" alt="">
+            </button>
+        </form>
+    </div>
+
     <header>
         <section>
             <div class="header-in">
@@ -28,9 +46,9 @@
                 </div>
                 <div class="header-right">
                     <nav>
-                        <a href="#">Проекты</a>
-                        <a href="#">Вопросы / ответы</a>
-                        <a href="#">Контакты</a>
+                        <a class="productSlide" href="#">Проекты</a>
+                        <a class="faqSlide" href="#">Вопросы / ответы</a>
+                        <a class="contactSlide" href="#">Контакты</a>
                     </nav>
                     <a href="tel:8 (921) 777-34-91" class="number">
                         <img src="./img/number.png" alt="">
@@ -54,7 +72,7 @@
                 <div class="first-slide-title">
                     <h1>Модульный дом</h1>
                     <p>под ключ за 20 дней</p>
-                    <a href="#" class="btn">Выбрать проект</a>
+                    <a href="#" class="btn productSlide">Выбрать проект</a>
                 </div>
             </section>
             <div class="first-slide-slider owl-carousel owl-theme">
@@ -66,7 +84,7 @@
             </div>
         </div>
 
-        <div class="wrapper wrapper-dark">
+        <div class="wrapper wrapper-dark" id="product">
             <section>
                 <img class="mobileElemHidden mobileElemHidden0" src="./img/decore-star.svg" alt="decore">
                 <img class="mobileElemHidden mobileElemHidden1" src="./img/decore-star.svg" alt="decore">
@@ -85,7 +103,7 @@
                             <p class="article-rub">от 1 500 000 ₽</p>
                             <span class="article-time">срок: 2 недели</span>
                             <div class="article-link">
-                                <a href="" class="btn dark">Подробнее</a>
+                                <a href="product.html" class="btn dark">Подробнее</a>
                                 <a href="" class="download" download>
                                     <div>
                                         <img class="download-img" src="./img/download.png" alt="">
@@ -106,7 +124,7 @@
                             <p class="article-rub">от 1 500 000 ₽</p>
                             <span class="article-time">срок: 2 недели</span>
                             <div class="article-link">
-                                <a href="" class="btn dark">Подробнее</a>
+                                <a href="product.html" class="btn dark">Подробнее</a>
                                 <a href="" class="download" download>
                                     <div>
                                         <img class="download-img" src="./img/download.png" alt="">
@@ -127,7 +145,7 @@
                             <p class="article-rub">от 1 500 000 ₽</p>
                             <span class="article-time">срок: 2 недели</span>
                             <div class="article-link">
-                                <a href="" class="btn dark">Подробнее</a>
+                                <a href="product.html" class="btn dark">Подробнее</a>
                                 <a href="" class="download" download>
                                     <div>
                                         <img class="download-img" src="./img/download.png" alt="">
@@ -148,7 +166,7 @@
                             <p class="article-rub">от 1 500 000 ₽</p>
                             <span class="article-time">срок: 2 недели</span>
                             <div class="article-link">
-                                <a href="" class="btn dark">Подробнее</a>
+                                <a href="product.html" class="btn dark">Подробнее</a>
                                 <a href="" class="download" download>
                                     <div>
                                         <img class="download-img" src="./img/download.png" alt="">
@@ -196,13 +214,13 @@
                              Фасад дома выглядит стильно и аккуратно, и легко вписывается в любой земельный участок даже при наличии других построек.</p>
                     </div>
                     <div class="advantage-elem advantage-elem--dark">
-                        <a href="#" class="btn">получить консультацию</a>
+                        <a class="btn popupOpen">получить консультацию</a>
                     </div>
                 </div>
             </section>
         </div>
 
-        <div class="wrapper wrapper-dark">
+        <div class="wrapper wrapper-dark" id="faq">
             <section>
                 <img class="mobileElemHidden mobileElemHidden8" src="./img/decore-star.svg" alt="">
                 <div class="faq-section">
@@ -321,8 +339,8 @@
                             <h2 class="light">Остались вопросы?</h2>
                             <p>Заполните формы и мы перезвоним</p>
                             <form id="faqForm">
-                                <input type="text" placeholder="Имя">
-                                <input type="text" id="numbers" placeholder="Номер телефона">
+                                <input type="text" placeholder="Имя" required>
+                                <input type="text" id="numbers" placeholder="Номер телефона" required>
                                 <button class="btn">
                                     Задать вопрос
                                     <img src="./img/arrow.svg" alt="">
@@ -346,7 +364,7 @@
                             <h4>01</h4>
                         </div>
                         <p>Мы обсудим детали проекта, назначим встречу на участке, проведем осмотр территории, подготовим договор и приступим к работе.</p>
-                        <a href="#" class="btn">Оставить заявку</a>
+                        <a class="btn popupOpen">Оставить заявку</a>
                     </div>
 
                     <div class="step-elem">
@@ -368,7 +386,7 @@
             </section>
         </div>
 
-        <div class="wrapper wrapper-dark slider-active-wrapper">
+        <div class="wrapper wrapper-dark slider-active-wrapper slider-dots-disabled">
             <section>
                 <div id="sliderNavWrapper"></div>
                 <div class="slider-wrapper owl-carousel owl-theme">
@@ -399,10 +417,46 @@
                 </div>
             </section>
         </div>
+
+        <div class="wrapper wrapper-pre-footer" id="contact">
+            <section>
+                <div class="pre-footer--left">
+                    <h2 class="dark">Контакты</h2>
+                    <p class="pre-footer--text">Tel: <a href="tel:8 (921) 777-34-91">8 (921) 777-34-91</a></p>
+                    <p class="pre-footer--text pre-footer--mail">Е-mail: <a href="">qubdom@mail.ru</a></p>
+                </div>
+            </section>
+            <div class="pre-footer-right">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d127909.34904990102!2d30.34982925063478!3d59.93905178491792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1599400061221!5m2!1sru!2sru" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <div class="map-line"></div>
+            </div>
+        </div>
     </main>
     
-    <footer>
-
+    <footer class="wrapper-dark">
+        <section>
+            <div class="footer-in">
+                <div class="footer-left">
+                    <img src="./img/logo.png" alt="">
+                    <div class="place">
+                        <img src="./img/place.png" alt="">
+                        <p class="desktopNumber">Санкт-Петербург</p>
+                        <p class="mobileNumber">Спб</p>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <nav>
+                        <a class="productSlide" href="#">Проекты</a>
+                        <a class="faqSlide" href="#">Вопросы / ответы</a>
+                        <a class="contactSlide" href="#">Контакты</a>
+                    </nav>
+                    <a href="tel:8 (921) 777-34-91" class="number">
+                        <img src="./img/number.png" alt="">
+                        <p>8 (921) 777-34-91</p>
+                    </a>
+                </div>
+            </div>
+        </section>
     </footer>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
