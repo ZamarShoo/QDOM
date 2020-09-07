@@ -1354,10 +1354,6 @@ input[type="text"]:active {
   padding: 17px 12px 17px 25px;
 }
 
-.product-table:nth-child(2n+1) {
-  margin-right: 2%;
-}
-
 .product-table--img {
   width: 100%;
   margin-top: 30px;
@@ -1453,6 +1449,155 @@ p.right {
   justify-content: space-between;
 }
 
+#tableNavWrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+#tableNavWrapper .owl-prev {
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+  z-index: 1;
+  border: 0;
+  outline: 0;
+  width: 33px;
+  height: 70px;
+  background: #000000;
+  opacity: 0.8;
+  border-radius: 0 5px 5px 0;
+}
+
+#tableNavWrapper .owl-prev span {
+  display: none;
+}
+
+#tableNavWrapper .owl-prev::before {
+  position: relative;
+  z-index: 2;
+  content: "";
+  width: 14px;
+  height: 7px;
+  background-image: url("./img/slider-arrow--hover.svg");
+  left: 8px;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+#tableNavWrapper .owl-next {
+  position: absolute;
+  bottom: 90px;
+  right: 0;
+  z-index: 1;
+  border: 0;
+  outline: 0;
+  width: 33px;
+  height: 70px;
+  background: #000000;
+  opacity: 0.8;
+  border-radius: 5px 0 0 5px;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+#tableNavWrapper .owl-next span {
+  display: none;
+}
+
+#tableNavWrapper .owl-next::before {
+  position: relative;
+  z-index: 2;
+  content: "";
+  width: 14px;
+  height: 7px;
+  background-image: url("./img/slider-arrow--hover.svg");
+  transform: rotate(180deg);
+  left: 10px;
+}
+
+#tableNavWrapper .owl-next:hover,
+#tableNavWrapper .owl-next:focus,
+#tableNavWrapper .owl-prev:hover,
+#tableNavWrapper .owl-prev:focus {
+  opacity: 1;
+}
+
+#tableNavWrapper .owl-next:active,
+#tableNavWrapper .owl-prev:active {
+  background: #F2C26B;
+}
+
+.dop--table h3 {
+  font-size: 18px;
+  margin-left: 29px;
+}
+
+.dop--table h3 img {
+  left: -27px;
+  top: 3px;
+}
+
+.dop--table p {
+  font-family: 'Montserrat Medium';
+  font-size: 14px;
+  line-height: 18px;
+  color: #252525;
+}
+
+.left-star::before {
+  position: relative;
+  content: "*";
+  color: #F2C26B;
+}
+
+.dop--table p.left-big,
+p.left-big {
+  width: 100% !important;
+}
+
+.table-all {
+  font-family: 'Montserrat Medium';
+  font-size: 16px;
+  line-height: 22px;
+  color: #252525;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.table-all img {
+  margin-right: 19px;
+}
+
+.table-all span {
+  font-family: 'Montserrat Medium';
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+}
+
 @media screen and (max-height: 690px) {
   .first-slide-slider,
   .first-slide-slider img {
@@ -1463,6 +1608,26 @@ p.right {
 @media screen and (max-width: 1336px) {
   .first-slide--info {
     width: 35%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .product-tables-wrapper {
+    width: 650px;
+    margin: 0 auto;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+    flex-direction: column;
+  }
+  .product-table-left,
+  .product-table-right {
+    width: 100%;
+  }
+  #tableNavWrapper .owl-prev,
+  #tableNavWrapper .owl-next {
+    bottom: 50px;
   }
 }
 
@@ -1806,6 +1971,29 @@ footer {
   }
 }
 
+@media screen and (max-width: 700px) {
+  .product-tables-wrapper {
+    width: 100%;
+    padding: 0;
+  }
+  .product-table--img {
+    margin-left: -25px;
+    width: 100vw;
+    height: 166px;
+  }
+  .product-table--img img {
+    width: 100vw;
+    height: 166px;
+    object-fit: cover;
+  }
+  #tableNavWrapper .owl-next {
+    right: -25px;
+  }
+  #tableNavWrapper .owl-prev {
+    left: -25px;
+  }
+}
+
 @media screen and (max-width: 620px) {
   .mobileElemHidden {
     display: none;
@@ -1853,6 +2041,9 @@ footer {
   }
   .popup input[type="text"]:nth-child(2) {
     margin-bottom: 50px;
+  }
+  .table-all {
+    font-size: 14px;
   }
 }
 
